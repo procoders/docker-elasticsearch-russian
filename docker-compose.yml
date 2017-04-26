@@ -1,0 +1,10 @@
+version: '2'
+services:
+  elasticsearch:
+    image: lagun4ik/elasticsearch-russian:2.4.4
+    restart: always
+    volumes:
+      - ./config:/usr/share/elasticsearch/config
+      - ./data:/usr/share/elasticsearch/data
+    ports:
+      - 9200:9200 # for mobz/elasticsearch-head
