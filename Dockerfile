@@ -1,6 +1,5 @@
-FROM elasticsearch:2.4.4
+FROM elasticsearch:5.6.8-alpine
 
-RUN bin/plugin install http://dl.bintray.com/content/imotov/elasticsearch-plugins/org/elasticsearch/elasticsearch-analysis-morphology/2.4.4/elasticsearch-analysis-morphology-2.4.4.zip
-RUN bin/plugin install mobz/elasticsearch-head
+RUN bin/elasticsearch-plugin install http://dl.bintray.com/content/imotov/elasticsearch-plugins/org/elasticsearch/elasticsearch-analysis-morphology/5.6.8/elasticsearch-analysis-morphology-5.6.8.zip
 
 ADD ./config /usr/share/elasticsearch/config
